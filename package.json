@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "mongoose": "^8.0.1",
+    "morgan": "^1.10.0"
+  },
+  "name": "NASA_20110430",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-sever": "npm install --prefix sever",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-sever && npm run install-client ",
+    "sever": "npm run watch --prefix sever",
+    "client": "npm start --prefix sever",
+    "watch": "npm run sever & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix sever",
+    "test": "npm run test --prefix sever && npm run test client --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
